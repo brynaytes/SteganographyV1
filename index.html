@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+
+	<style>
+		img{height:200px;}
+		.button {
+			background-color:#44c767;
+			border-radius:28px;
+			border:1px solid #18ab29;
+			display:inline-block;
+			cursor:pointer;
+			color:#ffffff;
+			font-family:Arial;
+			font-size:17px;
+			padding:16px 31px;
+			text-decoration:none;
+			text-shadow:0px 1px 0px #2f6627;
+		}
+		.button:hover {
+			background-color:#5cbf2a;
+		}
+		.button:active {
+			position:relative;
+			top:1px;
+		}
+
+	</style>
+</head>
+
+<body>
+	<h1>Image Encoder</h1>
+	<a class="button" target="blank" href="https://github.com/brynaytes/imageEncoder/blob/master/Image-Encoder.jar">download jar</a>
+	<p>The is program is meant to hide text inside of an image in an unobtrusive way. </p>
+	
+	<p>It takes text and an image. Then subtracts the ascii values of each letter from pixels representing this text  every 10 pixels. The resulting image can then be shared and decoded at any time.</p>
+	<p>The process allows storage of large amounts of text in a discrete way. Below are two identical pictures, but one has a portion of act one of Shakespeare’s Hamlett hidden in it.</p>
+	
+	<table>
+		<tr>
+			<th>unedited</th>
+			<th>edited</th>
+		</tr>
+		<tr>
+			<th><img src = "puppy.jpg"></th>
+			<th><img src = "PuppyOut.png"></th>
+		</tr>
+	</table>
+	
+	<p>Here is the same text placed onto a black image to better reflect the changes made to the picture.</p>
+	
+	<table>
+		<tr>
+			<th>unedited</th>
+			<th>edited</th>
+		</tr>
+		<tr>
+			<th><img src = "Blank.png"></th>
+			<th><img src = "BlankOut.png"></th>
+		</tr>
+	</table>
+</body>
+</html>
