@@ -1,4 +1,3 @@
-package Proj;
 
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
