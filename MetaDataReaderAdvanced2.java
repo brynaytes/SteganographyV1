@@ -1,16 +1,9 @@
-package Proj;
-
 import java.io.File;
 import java.io.IOException;
 import java.awt.image.BufferedImage;
 import javax.imageio.ImageIO;
 import java.util.Scanner; 
-/**
- * Write a description of class MetaDataMaker here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
+
 public class MetaDataReaderAdvanced2
 {
     
@@ -42,7 +35,7 @@ public class MetaDataReaderAdvanced2
                     int g2 = (p2 >> 8) & 0xff;
                     int b2 = p2& 0xff;
                     if(b != b2 && r != r2){
-                        txt = 13;
+                        txt = '\n';
                         all+= txt;
                        // System.out.println("found return");
                         continue;
