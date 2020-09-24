@@ -1,4 +1,3 @@
-package Proj;
 
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
@@ -34,7 +33,7 @@ public class Popupbox extends JDialog{
 		mdsa = mdsaTemp;
 		
 		PtextHolder = new JPanel();
-		TF = new JTextArea(30,20);
+		TF = new JTextArea(15,30);
 		
 		JScrollPane s = new JScrollPane(TF);
 
