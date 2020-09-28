@@ -17,7 +17,7 @@ public class MetaDataSetterAdvanced2
 {
 	static String[] partsHolder = new String[2];
     static int a,r,g,b,b2;
-    public static void main(String name,String s) {
+    public static void going(String name,String s) {
     	String templetter;
         BufferedImage img = null;
         File f = null;
@@ -104,10 +104,6 @@ public class MetaDataSetterAdvanced2
                         
                     }
                     
-                }else{
-                    //a= 255 - convertera(words[u]);
-                    
-                   //b=255;
                 }
                 
                 u += 1;
@@ -115,8 +111,6 @@ public class MetaDataSetterAdvanced2
                 p = (a<<24)|(r<<16)|(g<<8)|b;
                 img.setRGB(o,i+1,p);
             }
-            
-            //
         }
         try{
         	f= new File(name.substring(0,name.lastIndexOf('.'))+ "NEW.png");

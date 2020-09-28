@@ -1,9 +1,16 @@
+package Proj;
+
 import java.io.File;
 import java.io.IOException;
 import java.awt.image.BufferedImage;
 import javax.imageio.ImageIO;
 import java.util.Scanner; 
-
+/**
+ * Write a description of class MetaDataMaker here.
+ *
+ * @author (your name)
+ * @version (a version number or a date)
+ */
 public class MetaDataReaderAdvanced2
 {
     

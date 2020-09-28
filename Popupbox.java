@@ -1,3 +1,4 @@
+package Proj;
 
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
@@ -24,13 +25,12 @@ public class Popupbox extends JDialog{
 	
 	String fileName;
 	
-	MetaDataSetterAdvanced2 mdsa;
-	public Popupbox(StenWindow sw, MetaDataSetterAdvanced2 mdsaTemp) {
+	public Popupbox(StenWindow sw) {
 		super(sw, true);
 		
 		setSize(400,400);
 		setLayout(new BorderLayout());
-		mdsa = mdsaTemp;
+		
 		
 		PtextHolder = new JPanel();
 		TF = new JTextArea(15,30);
@@ -89,7 +89,7 @@ public class Popupbox extends JDialog{
 		
 	}
 	public void showNumberOfLetters() {
-		maxNum = mdsa.getMaxLetters(fileName);
+		maxNum = MetaDataSetterAdvanced2.getMaxLetters(fileName);
 		LmaxLetterNumber.setText("This image can hold: " + maxNum+" characters");
 	}
 	
@@ -105,7 +105,7 @@ public class Popupbox extends JDialog{
 					//accept text for the text area
 					setVisible(false);
 				}else {
-					mdsa.main(fileName,TF.getText());
+					MetaDataSetterAdvanced2.going(fileName,TF.getText());
 					setVisible(false);
 				}
 				

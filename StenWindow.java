@@ -1,3 +1,4 @@
+package Proj;
 
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
@@ -22,8 +23,6 @@ public class StenWindow extends JFrame{
 	 */
 	static BufferedImage img = null;
     
-    static MetaDataReaderAdvanced2 reader = new MetaDataReaderAdvanced2();
-    static MetaDataSetterAdvanced2 setter = new MetaDataSetterAdvanced2();
     
     Popupbox pop;
     File f = null;
@@ -48,7 +47,7 @@ public class StenWindow extends JFrame{
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setLayout(new GridLayout(2,1));
 		
-		pop = new Popupbox(this, setter);
+		pop = new Popupbox(this);
 		
 		buttonHolder = new JPanel();
 		Bencode = new JButton("Encode");
@@ -95,7 +94,7 @@ public class StenWindow extends JFrame{
 				
 				
 			
-			if(reader.isValidImage(f.toString())){
+			if(MetaDataReaderAdvanced2.isValidImage(f.toString())){
 				Lpath.setText("Path:  "+f.toString());
 				pack();
 			if(e.getSource() == Bencode) {
@@ -105,8 +104,8 @@ public class StenWindow extends JFrame{
 				
 				
 			}else if(e.getSource() == Bdecode) {
-					if(reader.testForKey(f + "")){
-	                pop.setTextField(reader.going(f.toString()));
+					if(MetaDataReaderAdvanced2.testForKey(f + "")){
+	                pop.setTextField(MetaDataReaderAdvanced2.going(f.toString()));
 	                pop.appear(true,j.getSelectedFile().getAbsoluteFile().toString());
 				}else {
 					JOptionPane.showMessageDialog(null, "This image doesn't have any data in it");
